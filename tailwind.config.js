@@ -1,0 +1,21 @@
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: ["./src/**/*"],
+  darkMode: "class",
+  theme: {
+    fontFamily: {
+      main: [`Consolas`, 'Times New Roman'],
+    },
+    extend: {
+      colors: {
+        accent: {
+          1: "hsl(var(--color-accent1) / <alpha-value>)",
+          2: "hsl(var(--color-accent2) / <alpha-value>)",
+        },
+        bkg: "hsl(var(--color-bkg) / <alpha-value>)",
+        content: "hsl(var(--color-content) / <alpha-value>)",
+      }
+    },
+  },
+  plugins: [],
+}

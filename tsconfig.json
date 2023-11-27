@@ -1,0 +1,28 @@
+{
+  "compilerOptions": {
+    // куда производится сборка.
+    "outDir": "./dist/",
+    // не даёт использовать какие либо переменные без явной типизации
+    "noImplicitAny": true,
+    // вариант модульной сборки
+    "module": "ESNext",
+    // в какую спецификацию компилируется: es5 для поддержки большинством браузеров.
+    "target": "es5",
+    "jsx": "react-jsx",
+    "allowJs": true,
+    "moduleResolution": "node",
+    // путь, с которого начинается абсолютный импорт, то есть он будет из папки в которой tsconfig а не из C://
+    "baseUrl": ".",
+    // esModuleInterop позволяет работать с обычными пакетами, которые используют commonjs
+    // как с обычными пакетами с помощью import (require() module.exports) = commonjs
+    "esModuleInterop": true,
+    // если в какой то библиотеке нет дефолтного експорта, то лоудеры вебпака, как ts-loader или babel-loader
+    // автоматически их создают.
+    "allowSyntheticDefaultImports": true,
+  },
+  "ts-node": {
+    "compilerOptions": {
+      "module" : "CommonJS"
+    }
+  }
+}
